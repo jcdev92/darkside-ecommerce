@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { NavLink, Route, Routes } from 'react-router-dom'
 import Home from './components/Routes/Home'
 import ProducDetail from './components/Routes/ProducDetail'
 import Login from './components/Routes/Login'
@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <NavLink />
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProducDetail />} />
         <Route path="/purchases" element={<Purchases />} />
