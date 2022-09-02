@@ -3,24 +3,24 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Header>
+    <header>
       <NavLink to="/">
         <h1 className="header__logo"></h1>
       </NavLink>
       <nav className="header__nav">
         <ul className="header__list">
           <li className="header__item">
-            <NavLink className="header__link" to="login" />
+            <NavLink className={({isActive}) => isActive ? 'active-link': ''} to="/login"> Login </NavLink>
           </li>
           <li className="header__item">
-            <NavLink className="header__link" to="/purchases" />
+            <NavLink className={({isActive}) => isActive ? 'active-link': ''} to="/purchases"> Purchase </NavLink>
           </li>
           <li className="header__item">
             <h2 className="header__link">Cart</h2>
           </li>
         </ul>
       </nav>
-    </Header>
+    </header>
   );
 };
 

@@ -6,14 +6,15 @@ import Home from './components/Routes/Home'
 import ProducDetail from './components/Routes/ProducDetail'
 import Login from './components/Routes/Login'
 import Purchases from './components/Routes/Purchases'
+import Header from './components/shared/Header'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <Header />
       <Routes>
-        <NavLink />
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProducDetail />} />
         <Route path="/purchases" element={<Purchases />} />
