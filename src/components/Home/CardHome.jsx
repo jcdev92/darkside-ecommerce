@@ -1,10 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const CardHome = ({product}) => {
 
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate(`/product/${product.id}`)
+  }
+
   console.log(product)
   return (
-    <article clasName="card__home">
+    <article onClick={handleClick}>
       <header className="card__home ch__header">
         <img src={product.productImgs[0]} alt={product.title} />
       </header>
@@ -14,7 +21,7 @@ const CardHome = ({product}) => {
         </h3>
         <section className="ch__body ch__body-product">
           <h4 className="">
-            {product.description}
+            Price
           </h4>
           <span className="">
             {product.price}

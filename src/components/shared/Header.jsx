@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <NavLink to="/">
-        <h1 className="header__logo"></h1>
+        <h1 className="header__logo"> JC SHOP</h1>
       </NavLink>
       <nav className="header__nav">
         <ul className="header__list">
