@@ -27,7 +27,7 @@ const CardHome = ({product}) => {
             {product.price}
           </span>
         </section>
-        <button className="card__home ch__button"></button>
+        <button className="card__home ch__button">See More</button>
       </div>
 
       
