@@ -9,10 +9,16 @@ const CardHome = ({product}) => {
         <img src={product.productImgs[0]} alt={product.title} />
       </header>
       <div className="card__home ch__body">
-        <h3></h3>
+        <h3>
+          {product.title}
+        </h3>
         <section className="ch__body ch__body-product">
-          <h4 className=""></h4>
-          <span className=""></span>
+          <h4 className="">
+            {product.description}
+          </h4>
+          <span className="">
+            {product.price}
+          </span>
         </section>
         <button className="card__home ch__button"></button>
       </div>
