@@ -17,6 +17,7 @@ const Home = () => {
 
   return (
     <section className="home">
+      <div className="box__empty"></div>
       <div className="home__container">
         <aside className="home side__bar"></aside>
         <div className="home home__products">
@@ -30,7 +31,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <footer className="home__footer"></footer>
     </section>
   )
 }

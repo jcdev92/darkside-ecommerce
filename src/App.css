@@ -19,19 +19,20 @@ body {
     padding: 0;
 }
 
-
+.header, .box__empty {
+    width: 100%;
+    height: 150px;
+}
 
 .header {
     display: flex;
     flex-direction: row wrap;
-    width: 100%;
-    height: 150px;
     background-color: steelblue;
     color: #fff;
     align-items: center;
     justify-content: space-around;
     text-align: center;
-
+    position: fixed;
 }
 
 
@@ -97,8 +98,6 @@ body {
 .home {
     display: flex;
     flex-flow: row wrap;
-    padding-top: 2rem;
-    gap: 2rem;
     width: 100%;
     height: 100%;
 }
@@ -111,17 +110,20 @@ body {
 
 .home__products {
     flex-flow: row wrap;
-    justify-content: center;
-    max-width: 75%;
+    justify-content: end;
+    max-width: 100%;
     padding: 2rem;
+    gap: 2rem;
 }
 
 .cards__container {
     flex-flow: row wrap;
     justify-content: space-around;
-    width: 95%;
+    align-items: center;
+    width: 80%;
     height: 95%;
     padding: 2rem;
+    gap: 2rem;
 }
 
 .search__bar {
@@ -130,16 +132,17 @@ body {
     align-items: center;
     width: 80%;
     height: 100px;
-    background-color: steelblue;
     color: #fff;
     text-align: center;
 }
 
 .side__bar {
     flex-flow: column wrap;
-    width: 25%;
-    height: 50%;
+    width: 20%;
+    height: 60%;
     background-color: f2f2f2;
+    position: fixed;
+    top: 150px;
 }
 
 .home__footer {
@@ -166,6 +169,3 @@ body {
     transition: 0.2s transform ease-in-out;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
