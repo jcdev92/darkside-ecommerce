@@ -13,7 +13,7 @@ const CardHome = ({product}) => {
   return (
     <article onClick={handleClick}>
       <header className="card__home ch__header">
-        <img src={product.productImgs[0]} alt={product.title} />
+        <img src={product.productImgs[0]} alt={product.title} width="100px" height="100px"/>
       </header>
       <div className="card__home ch__body">
         <h3>

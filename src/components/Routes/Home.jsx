@@ -16,16 +16,22 @@ const Home = () => {
 
 
   return (
-    <div className="home">
-      <h1>Home</h1>
-      <div className="home__container-card">
-        {
-          products?.map(product => (
-            <CardHome key={product.id} product={product}/>
-          ))
-        }
+    <section className="home">
+      <div className="home__container">
+        <aside className="home side__bar"></aside>
+        <div className="home home__products">
+          <div className="home search__bar"></div>
+          <div className="home cards__container">
+            {
+              products?.map(product => (
+                <CardHome key={product.id} product={product}/>
+                ))
+              }
+          </div>
+        </div>
       </div>
-    </div>
+      <footer className="home__footer"></footer>
+    </section>
   )
 }
 
