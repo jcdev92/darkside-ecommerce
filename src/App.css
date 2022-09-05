@@ -30,9 +30,10 @@ body {
     background-color: steelblue;
     color: #fff;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
     position: fixed;
+    padding: 2rem;
 }
 
 
