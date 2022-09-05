@@ -20,9 +20,10 @@ const ProducDetail = () => {
   console.log(productInfo)
 
   return (
-    <div>
-    <ProductDescription key={productInfo?.id} productInfo={productInfo} />
-    </div>
+    <section>
+      <div className="empty__box"></div>
+      <ProductDescription key={productInfo?.id} productInfo={productInfo} />
+    </section>
   )
 }
 
