@@ -11,15 +11,13 @@ const FormLogin = () => {
         axios.post(URL, data)
             .then(res => localStorage.setItem('token', res.data.data.token))
             .catch(err => console.log(err))
-        // reset(
-        //     {
-        //         email: '',
-        //         password: ''
-        //     }
-        // )
+        reset(
+            {
+                email: '',
+                password: ''
+            }
+        )
     }
-
-    
 
   return (
     <form onSubmit={handleSubmit(submit)}>

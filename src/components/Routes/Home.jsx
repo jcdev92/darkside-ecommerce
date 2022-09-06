@@ -27,11 +27,12 @@ const Home = () => {
       <div className="empty__box"></div>
       <div className="home__container">
         <aside className="home side__bar">
-          <SearchProductHome setNameProduct={setNameProduct} />
           <SelectProduct selectProduct={selectProduct} setSelectProduct={setSelectProduct} products={products} />
         </aside>
         <div className="home home__products">
-          <div className="home search__bar"></div>
+          <div className="home search__bar">
+            <SearchProductHome setNameProduct={setNameProduct} />
+          </div>
           <div className="home cards__container">
             {
               products?.map(product => {

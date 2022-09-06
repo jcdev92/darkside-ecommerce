@@ -23,6 +23,7 @@ const Cart = () => {
 
   return (
     <article className='cart'>
+        <div className="empty__box"></div>
         <h2>Cart</h2>
         <ProductCart/>
         <footer className='cart__footer'>
