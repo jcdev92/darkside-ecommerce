@@ -27,11 +27,11 @@ const Home = () => {
       <div className="empty__box"></div>
       <div className="home__container">
         <aside className="home side__bar">
-          <SelectProduct selectProduct={selectProduct} setSelectProduct={setSelectProduct} products={products} />
+          <SelectProduct selectProduct={selectProduct} setSelectProduct={setSelectProduct} products={products}/>
         </aside>
         <div className="home home__products">
           <div className="home search__bar">
-            <SearchProductHome setNameProduct={setNameProduct} />
+            <SearchProductHome setNameProduct={setNameProduct} setSelectProduct={setSelectProduct} />
           </div>
           <div className="home cards__container">
             {
