@@ -8,24 +8,9 @@ import ProducDetail from './components/Routes/ProducDetail'
 import Login from './components/Routes/Login'
 import Purchases from './components/Routes/Purchases'
 import Header from './components/shared/Header'
+import Cart from './components/shared/Cart'
 
 function App() {
-  useEffect(() => {
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users'
-
-    const obj = {
-      firstName : "Rick",
-      lastName : "Sanchez",
-      email : "rick@genius.com",
-      password : "pass123456",
-      phone : "1234567891",
-      role: "admin"
-    }
-
-    axios.post(URL, obj)
-      .then(res => console.log(res.data))
-      .catch(err => console.log(err))
-  }, [])
 
   return (
     <div className="App">
@@ -35,6 +20,7 @@ function App() {
         <Route path="/product/:id" element={<ProducDetail />} />
         <Route path="/purchases" element={<Purchases />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/Cart" element={<Cart />} />
         <Route path="*" element={<div>404 Not found</div>} />
       </Routes>
       <footer className="home__footer"></footer>

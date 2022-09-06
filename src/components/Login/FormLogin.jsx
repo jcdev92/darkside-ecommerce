@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
@@ -6,9 +7,19 @@ const FormLogin = () => {
    const {register, handleSubmit, reset} = useForm()
 
     const submit = (data) => {
-        console.log(data)
-        reset()
+        const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users/login'
+        axios.post(URL, data)
+            .then(res => localStorage.setItem('token', res.data.data.token))
+            .catch(err => console.log(err))
+        // reset(
+        //     {
+        //         email: '',
+        //         password: ''
+        //     }
+        // )
     }
+
+    
 
   return (
     <form onSubmit={handleSubmit(submit)}>

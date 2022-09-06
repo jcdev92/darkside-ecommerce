@@ -16,7 +16,7 @@ const Header = () => {
               <NavLink className={({isActive}) => isActive ? 'active-link': ''} to="/purchases"> Purchase </NavLink>
             </li>
             <li className="header__item">
-              <h2 className="header__link">Cart</h2>
+              <NavLink className={({isActive}) => isActive ? 'active-link': ''} to="/Cart"> Cart </NavLink>
             </li>
           </ul>
         </nav>
