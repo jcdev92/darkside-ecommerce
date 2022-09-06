@@ -17,7 +17,7 @@ const ProducDetail = () => {
   }
   , [])
 
-  console.log(productInfo)
+  // console.log(productInfo)
 
   return (
     <section>
