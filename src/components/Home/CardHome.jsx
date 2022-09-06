@@ -31,7 +31,9 @@ const CardHome = ({product}) => {
             {product.price}
           </span>
         </section>
-        <button onClick={handleButton} className="card__button">See More</button>
+        <div className="box__button">
+          <button onClick={handleButton} className="card__button">See More</button>
+        </div>
       </div>
 
       
