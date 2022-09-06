@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import { NavLink, Route, Routes } from 'react-router-dom'
@@ -7,27 +8,24 @@ import ProducDetail from './components/Routes/ProducDetail'
 import Login from './components/Routes/Login'
 import Purchases from './components/Routes/Purchases'
 import Header from './components/shared/Header'
-import axios from 'axios'
 
 function App() {
+  // useEffect(() => {
+  //   const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users'
 
-// useEffect(()=>{
-//   let url = "https://ecommerce-api-react.herokuapp.com/api/v1/users"
-  
-//   const obj={
-//     firstName: "Se",
-//     lastName: "Bastian",
-//     email: "qwesadzxcvbn123452@gmail.com",
-//     password: "123456",
-//     phone: "1234567891",
-//     role: "admin"
-//   } 
-  
-//   axios.post(url,obj)
-//   .then(res => console.log(res.data))
-//   .catch(err => console.log(err))
-// },[])
+  //   const obj = {
+  //     firstName : "Rick",
+  //     lastName : "Sanchez",
+  //     email : "rick@genius.com",
+  //     password : "pass123456",
+  //     phone : "1234567891",
+  //     role: "admin"
+  //   }
 
+  //   axios.post(URL, obj)
+  //     .then(res => console.log(res.data))
+  //     .catch(err => console.log(err))
+  // }, [])
 
   return (
     <div className="App">

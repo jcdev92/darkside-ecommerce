@@ -1,14 +1,13 @@
 import React from 'react'
-import FormLogin from '../login/FormLogin'
+import FormLogin from '../Login/FormLogin'
 
 const Login = () => {
-
-
   return (
-    <div>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <FormLogin/>
-    </div>
+    <section>
+       <div className="empty__box"></div>
+      <h1>Login</h1>
+      <FormLogin />
+    </section>
   )
 }
 

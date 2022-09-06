@@ -5,7 +5,7 @@ const SearchProductHome = ({setNameProduct}) => {
 
     const handleSearchProduct = (e) =>{
         e.preventDefault()
-        setNameProduct(e.target.nameProduct.value.toLowerCase().trim())
+        setNameProduct(e.target.nameProduct.value)
       }
 
     return (
