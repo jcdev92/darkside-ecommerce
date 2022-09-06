@@ -9,7 +9,7 @@ const CardHome = ({product}) => {
     navigate(`/product/${product.id}`)
   }
 
-  console.log(product)
+  // console.log(product)
   return (
     <article onClick={handleClick} className="card">
       <header className="card__header">
