@@ -23,6 +23,7 @@ const FormLogin = () => {
             <label className="form__label" htmlFor="password">Password</label>
             <input {...register('password')} className="form__input" type="password" name="password" id="password" placeholder="Password"/>
         </div>
+        <button className="form__button" type="submit">Login</button>
     </form>
   )
 }

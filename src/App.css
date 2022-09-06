@@ -172,9 +172,11 @@ body {
 
 .card__header {
     height: 220px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 
 .card__header img {
