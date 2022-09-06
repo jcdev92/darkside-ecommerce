@@ -5,8 +5,13 @@ const FormLogin = () => {
 
    const {register, handleSubmit, reset} = useForm()
 
+    const submit = (data) => {
+        console.log(data)
+        reset()
+    }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit(submit)}>
         <h2>
             Welcome! Enter your email address and password to login
         </h2>
