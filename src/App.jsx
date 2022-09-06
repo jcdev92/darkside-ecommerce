@@ -20,7 +20,7 @@ function App() {
         <Route path="/product/:id" element={<ProducDetail />} />
         <Route path="/purchases" element={<Purchases />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/Cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<div>404 Not found</div>} />
       </Routes>
       <footer className="home__footer"></footer>
