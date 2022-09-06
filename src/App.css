@@ -1,14 +1,22 @@
-
-
-* {
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+*{
+    font-family: 'Yantramanav', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    color: #515151;
+    list-style: none;
+    text-decoration: none;
     border: 1px solid black; /* provitional use, only by layout process*/
-    
-}
+  }
+  
+  :root{
+    --primary: #F85555;
+    --light-gray: #DCD9D9;
+    --gray: #C7C7C7;
+    --dark-gray: #4F4F4F;
+    --text-gray: #ABABAB;
+  }
+
 
 body {
     background-color: #f2f2f2;
@@ -27,7 +35,7 @@ body {
 .header {
     display: flex;
     flex-direction: row wrap;
-    background-color: steelblue;
+    background-color: var(--light-gray);
     color: #fff;
     align-items: center;
     justify-content: space-between;
@@ -101,20 +109,20 @@ body {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    height: 100%;
 }
 
 .home__container {
     display: flex;
     flex-flow: column wrap;
     background-color: #fff;
+    width: 100%;
 }
 
 .home__products {
     flex-flow: row wrap;
     justify-content: end;
-    max-width: 100%;
-    padding: 2rem;
+    width: 100%;
+    padding: 3.3rem;
     gap: 2rem;
 }
 
@@ -133,7 +141,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 100px;
+    height: 130px;
     color: #fff;
     text-align: center;
 }
@@ -200,4 +208,31 @@ body {
 .card__body--product {
     align-items: start;
     padding: 10px 0 10px 20px;
+}
+
+.input{
+    display: flex;
+    width: 70%;
+}
+
+.input input{
+    flex: 1;
+    border: 1px solid var(--light-gray);
+    padding: 5px 14px;
+    font-size: .9rem;
+}
+
+.input input::placeholder { 
+    color: var(--gray);
+}
+
+.input button{
+    width: 90px;
+    height: 45px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
 }
