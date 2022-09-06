@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import ProductDescription from '../productDetail/ProductDescription'
+import Slider from '../productDetail/Slider'
 
 const ProducDetail = () => {
 
@@ -17,12 +18,15 @@ const ProducDetail = () => {
   }
   , [])
 
-  // console.log(productInfo)
+   console.log(productInfo)
 
   return (
     <section>
       <div className="empty__box"></div>
+      <div className='productDetail__main_cont'>
+      <Slider imgs={productInfo?.productImgs} />
       <ProductDescription key={productInfo?.id} productInfo={productInfo} />
+      </div>
     </section>
   )
 }
