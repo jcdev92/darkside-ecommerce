@@ -8,9 +8,10 @@ const SearchProductHome = ({setNameProduct, setSelectProduct}) => {
         setNameProduct(e.target.nameProduct.value)
         setSelectProduct()
       }
+    
 
     return (
-        <form action="" onSubmit={handleSearchProduct}>
+        <form action="" onSubmit={handleSearchProduct} className="input">
             <input type="text" id='nameProduct' placeholder='search product' />
             <button>Search</button>
         </form>
