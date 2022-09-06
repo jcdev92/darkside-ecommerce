@@ -8,10 +8,15 @@ const CardHome = ({product}) => {
   const handleClick = () => {
     navigate(`/product/${product.id}`)
   }
+
+  const handleButton = () => {
+    navigate(`/cart`)
+    // add to cart
+  }
   
   return (
-    <article onClick={handleClick} className="card">
-      <header className="card__header">
+    <article className="card">
+      <header className="card__header" onClick={handleClick}>
         <img src={product.productImgs[0]} alt={product.title}/>
       </header>
       <div className="card__body">
@@ -26,7 +31,7 @@ const CardHome = ({product}) => {
             {product.price}
           </span>
         </section>
-        <button className="card__button">See More</button>
+        <button onClick={handleButton} className="card__button">See More</button>
       </div>
 
       
