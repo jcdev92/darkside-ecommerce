@@ -20,6 +20,20 @@ function App() {
 
   useEffect(() => {
     dispatch(getAllProducts())
+
+    // const obj = {
+    // firstName: "a",
+    // lastName: "b",
+    // email: "abcdefg2121@gmail.com",
+    // password: "pass1234",
+    // phone: "1234567891",
+    // role: "admin"
+    // }
+
+    // const url = "https://ecommerce-api-react.herokuapp.com/api/v1/users"
+    // axios.post(url,obj)
+    // .then(res => console.log(res.data))
+    // .catch(err => console.log(err))
   }, [])
 
   return (

@@ -1,5 +1,7 @@
+import axios from 'axios'
 import React from 'react'
 import {MdOutlineDeleteOutline} from 'react-icons/md'
+import getConfig from '../../utils/getConfig'
 
 const ProductCart = ({product, getAllProductsCart}) => {
 

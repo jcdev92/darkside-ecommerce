@@ -1,12 +1,19 @@
 import React from 'react'
+import CheckLogin from '../Login/CheckLogin'
 import FormLogin from '../Login/FormLogin'
 
 const Login = () => {
+
+  const token = localStorage.getItem("token")
+
   return (
-    <section>
-       <div className="empty__box"></div>
-      <h1>Login</h1>
-      <FormLogin />
+    <section className='login'>
+      <div className="empty__box"></div>
+      <div className='login_cont'>
+        {
+        token ? <CheckLogin/> : <FormLogin />    
+        }
+      </div>
     </section>
   )
 }
