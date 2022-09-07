@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProducDetail />} />
         <Route path="/login" element={<Login />} />
-        <Route elemen={<ProtectedRoutes}t>
+        <Route element={<ProtectedRoutes/>}>
           <Route path="/purchases" element={<Purchases />} />
           <Route path="/cart" element={<Cart />} />
         </Route>

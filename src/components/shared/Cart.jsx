@@ -1,21 +1,16 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import getConfig from '../../utils/getConfig'
 import ProductCart from '../Cart/ProductCart'
+
 
 const Cart = () => {
 
     const [cartProducts, setCartProducts] = useState()
 
     useEffect(()=>{
-
-        const config ={
-            headers:{
-                Authorization:`Bearer ${localStorage.getItem(`token`)}`
-            }
-        }
-
         const url = "https://ecommerce-api-react.herokuapp.com/api/v1/cart"
-        axios.get(url, config)
+        axios.get(url, getConfig())
         .then(res => setCartProducts(res.data))
         .catch(err => console.log(err))
     },[])
