@@ -10,14 +10,15 @@ const CardHome = ({product}) => {
     navigate(`/product/${product.id}`)
   }
 
-  const handleButton = () => {
+  const handleButton = (e) => {
+    e.stopPropagation()
     navigate(`/cart`)
     // add to cart
   }
   
   return (
-    <article className="card">
-      <header className="card__header" onClick={handleClick}>
+    <article className="card" onClick={handleClick}>
+      <header className="card__header">
         <img src={product.productImgs[0]} alt={product.title}/>
       </header>
       <div className="card__body">

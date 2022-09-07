@@ -183,6 +183,7 @@ body {
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: 0.2s transform ease-in-out;
+    cursor: pointer;
 }
 
 .card__header {
@@ -192,7 +193,6 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    cursor: pointer;
 }
 
 .card__header img {
