@@ -9,6 +9,7 @@ import Login from './components/Routes/Login'
 import Purchases from './components/Routes/Purchases'
 import Header from './components/shared/Header'
 import Cart from './components/shared/Cart'
+import ProtectedRoutes from './components/ProtectedRoutes'
 
 function App() {
 
@@ -18,9 +19,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProducDetail />} />
-        <Route path="/purchases" element={<Purchases />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route elemen={<ProtectedRoutes}t>
+          <Route path="/purchases" element={<Purchases />} />
+          <Route path="/cart" element={<Cart />} />
+        </Route>
         <Route path="*" element={<div>404 Not found</div>} />
       </Routes>
       <footer className="home__footer"></footer>
