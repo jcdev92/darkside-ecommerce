@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {BsCartPlus} from 'react-icons/bs'
 
 const ProductDescription = ({productInfo}) => {
 
@@ -6,6 +7,19 @@ const ProductDescription = ({productInfo}) => {
 
     const handlePlus = () => setCount(count + 1)
     const handleMinus = () => count - 1 >= 1 ? setCount(count - 1) : setCount(1)
+
+    const handleAddCart = e => {
+        e.stopPropagation()
+        const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+        const obj = {
+          id: product.id,
+          quantity: count
+        }
+        axios.post(URL, obj, getConfig())
+          .then(res => console.log(res.data))
+          .catch(err => console.log(err))
+          navigate(`/cart`)
+      }
 
   return (
     <section className="product__desc">
@@ -22,10 +36,12 @@ const ProductDescription = ({productInfo}) => {
                     <button onClick={handlePlus} className="stock__button__plus">+</button>
                     <span className="stock__value">{count}</span>
                     <button onClick={handleMinus} className="stock__button__plus">-</button>
+                    <div className="box__button">
+                        <button onClick={handleAddCart} className="card__button"><BsCartPlus className="cart__icon"/></button>
+                    </div>
                 </div>
             </article>
         </div>
-
     </section>
   )
 }

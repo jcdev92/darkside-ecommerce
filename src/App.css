@@ -181,10 +181,6 @@ body {
     color: var(--dark-gray);
 }
 
-.option {
-    background-color: #fff;
-    border: none;
-}
 
 .home__footer {
     display: flex;
