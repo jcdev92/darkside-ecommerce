@@ -56,9 +56,11 @@ const Cart = () => {
                 </div>
                 <hr className='cart__hr' />
                 <footer className='cart__footer'>
-                    <span className='cart__total-global-label'>Total:</span>
-                    <p className='cart__total-global-value'>1350</p>
-                    <button onClick={handleCheckout} className='cart__btn'>Checkout</button>
+                    <div className='cart__footer--total'>
+                        <span className='cart__total-global-label'>Total:</span>
+                        <p className='cart__total-global-value'>1350</p>
+                    </div>
+                    <button onClick={handleCheckout} className='cart__footer--button'>Checkout</button>
                 </footer>
             </article>
         </section>
