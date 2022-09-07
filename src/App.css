@@ -181,6 +181,11 @@ body {
     color: var(--dark-gray);
 }
 
+.option {
+    background-color: #fff;
+    border: none;
+}
+
 .home__footer {
     display: flex;
     justify-content: center;
@@ -303,6 +308,7 @@ body {
 .card__icon:hover {
     color: var(--primary);
 }
+
 
 
 /* Detail Products */
