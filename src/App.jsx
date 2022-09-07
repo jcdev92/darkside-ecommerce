@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import { NavLink, Route, Routes } from 'react-router-dom'
 import Home from './components/Routes/Home'
@@ -10,14 +9,24 @@ import Purchases from './components/Routes/Purchases'
 import Header from './components/shared/Header'
 import Cart from './components/shared/Cart'
 import ProtectedRoutes from './components/ProtectedRoutes'
+import { useDispatch, useSelector } from 'react-redux'
+import { getAllProducts } from './store/slices/products.slice'
 
 function App() {
+
+  const products = useSelector(state => state.products)
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getAllProducts())
+  }, [])
 
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home products={products}/>} />
         <Route path="/product/:id" element={<ProducDetail />} />
         <Route path="/login" element={<Login />} />
         <Route element={<ProtectedRoutes/>}>

@@ -6,21 +6,10 @@ import SearchProductHome from '../Home/SearchProductHome'
 import SelectProduct from '../Home/SelectProduct'
 import Cart from '../shared/Cart'
 
-const Home = () => {
-
-
+const Home = ({products}) => {
+  
   const [selectProduct, setSelectProduct] = useState()
   const [nameProduct, setNameProduct] = useState("")
-
-
-  const products = useSelector(state => state.products)
-
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(getAllProducts())
-  }, [])
-
 
   return (
     <section className="home">
