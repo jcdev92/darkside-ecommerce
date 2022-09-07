@@ -8,13 +8,18 @@ const Cart = () => {
 
     const [cartProducts, setCartProducts] = useState()
 
-    useEffect(()=>{
-        const url = "https://ecommerce-api-react.herokuapp.com/api/v1/cart"
-        axios.get(url, getConfig())
-        .then(res => setCartProducts(res.data))
-        .catch(err => console.log(err))
-    },[])
-    console.log(cartProducts);
+    const getAllProductsCart = () => {
+      const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+      axios.get(URL, getConfig())
+        .then(res => setCartProducts(res.data.data.cart.products))
+        .catch(err => setCartProducts())
+    }
+  
+    useEffect(() => {
+      getAllProductsCart()
+    }, [])
+
+    
 
   return (
     <article className='cart'>
@@ -24,7 +29,7 @@ const Cart = () => {
         <footer className='cart__footer'>
             <span className='cart__total__global'>Total:</span>
             <p className='cart__total__global_value'>1350</p>
-            <button className='cart__btn'>Chechout</button>
+            <button className='cart__btn'>Checkout</button>
         </footer>
     </article>
   )

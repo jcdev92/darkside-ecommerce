@@ -1,6 +1,9 @@
 import React from 'react'
 
 const ProductCart = () => {
+    
+
+
   return (
     <article className='cart__item'>
         <header className='cart__item__header'>

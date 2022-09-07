@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {BsCartPlus} from 'react-icons/bs'
+import axios from 'axios'
+import getConfig from '../../utils/getConfig'
 
 const CardHome = ({product}) => {
 
@@ -12,6 +14,15 @@ const CardHome = ({product}) => {
 
   const handleButton = (e) => {
     e.stopPropagation()
+    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+    const conf = {
+      id: product.id,
+      quantity: 1
+    }
+    axios.post(URL, getConfig(), conf)
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err))
+
     navigate(`/cart`)
     // add to cart
   }
