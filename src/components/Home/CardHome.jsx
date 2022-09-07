@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import {BsCartPlus} from 'react-icons/bs'
 
 const CardHome = ({product}) => {
 
@@ -32,7 +33,7 @@ const CardHome = ({product}) => {
           </span>
         </section>
         <div className="box__button">
-          <button onClick={handleButton} className="card__button">See More</button>
+          <button onClick={handleButton} className="card__button"><BsCartPlus className="cart__icon"/></button>
         </div>
       </div>
 
