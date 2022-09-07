@@ -18,12 +18,15 @@ const ProductCart = ({product, getAllProductsCart}) => {
       <h4 className='cart__category'>{product.brand}</h4>
       <h3 className='cart__name'>{product.title}</h3>
     </header>
-    <i onClick={handleDeleteProduct} className="cart__trash"><MdOutlineDeleteOutline/></i>
-    <span className='cart__quantity'>{product.productsInCart.quantity}</span>
+    <dv className="quantity">
+      <h3>quantity</h3>
+      <span className='cart__quantity'>{product.productsInCart.quantity}</span>
+    </dv>
     <footer className='cart__item-footer'>
       <span className='cart__total-label'>Total:</span>
       <p className='cart__total-number'>{product.price}</p>
     </footer>
+    <i onClick={handleDeleteProduct} className="cart__trash"><MdOutlineDeleteOutline/></i>
   </article>
     )
 }

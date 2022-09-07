@@ -38,27 +38,29 @@ const Cart = () => {
 
 
     return (
-        <section className='cart'>
+        <section className='cart__container'>
             <div className="empty__box"></div>
-            <h2 className='cart__title'>Cart</h2>
-            <div className='cart__container-item'>
-                {
-                    cartProducts?.map(product => (
-                        <ProductCart
-                            key={product.id}
-                            product={product}
-                            getAllProductsCart={getAllProductsCart}
-                        />
-                    ))
-                }
+            <article className='cart'>
+                <h2 className='cart__title'>Cart</h2>
+                <div className='cart__container--item'>
+                    {
+                        cartProducts?.map(product => (
+                            <ProductCart
+                                key={product.id}
+                                product={product}
+                                getAllProductsCart={getAllProductsCart}
+                            />
+                        ))
+                    }
 
-            </div>
-            <hr className='cart__hr' />
-            <footer className='cart__footer'>
-                <span className='cart__total-global-label'>Total:</span>
-                <p className='cart__total-global-value'>1350</p>
-                <button onClick={handleCheckout} className='cart__btn'>Checkout</button>
-            </footer>
+                </div>
+                <hr className='cart__hr' />
+                <footer className='cart__footer'>
+                    <span className='cart__total-global-label'>Total:</span>
+                    <p className='cart__total-global-value'>1350</p>
+                    <button onClick={handleCheckout} className='cart__btn'>Checkout</button>
+                </footer>
+            </article>
         </section>
     )
 }
