@@ -36,16 +36,19 @@ const CardHome = ({product}) => {
           {product.title}
         </h3>
         <section className="card__body card__body--product">
-          <h4 className="">
-            Price
-          </h4>
-          <span className="">
-            {product.price}
-          </span>
-        </section>
-        <div className="box__button">
+          <div className="price__box">
+            <h4 className="">
+              Price
+            </h4>
+            <span className="">
+              {product.price}
+            </span>
+          </div>
+          <div className="box__button">
           <button onClick={handleAddCart} className="card__button"><BsCartPlus className="cart__icon"/></button>
-        </div>
+          </div>
+        </section>
+
       </div>
 
       
