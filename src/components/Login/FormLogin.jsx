@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React from 'react'
+import '../../css/login.css'
 import { useForm } from 'react-hook-form'
 
 const FormLogin = () => {
@@ -20,7 +21,8 @@ const FormLogin = () => {
     }
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
+    <form className='login__form' onSubmit={handleSubmit(submit)}>
+        <h1>Login</h1>
         <h2>
             Welcome! Enter your email address and password to login
         </h2>
@@ -32,7 +34,9 @@ const FormLogin = () => {
             <label className="form__label" htmlFor="password">Password</label>
             <input {...register('password')} className="form__input" type="password" name="password" id="password" placeholder="Password"/>
         </div>
-        <button className="form__button" type="submit">Login</button>
+        <div className='form__cont__btn'>
+            <button className="form__button" type="submit">Login</button>
+        </div>
     </form>
   )
 }
