@@ -1,5 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import {CgLogIn} from 'react-icons/cg';
+import {AiOutlineShoppingCart} from 'react-icons/ai';
+import {MdOutlineAutoStories} from 'react-icons/md';
 
 const Header = () => {
   return (
@@ -10,13 +13,13 @@ const Header = () => {
         <nav className="header__nav">
           <ul className="header__list">
             <li className="header__item">
-              <NavLink className={({isActive}) => isActive ? 'active-link': ''} to="/login"> Login </NavLink>
+              <NavLink className={({isActive}) => isActive ? 'active-link': 'inactive-link'} to="/login"> <CgLogIn/> </NavLink>
             </li>
             <li className="header__item">
-              <NavLink className={({isActive}) => isActive ? 'active-link': ''} to="/purchases"> Purchase </NavLink>
+              <NavLink className={({isActive}) => isActive ? 'active-link': 'inactive-link'} to="/purchases"> <MdOutlineAutoStories/> </NavLink>
             </li>
             <li className="header__item">
-              <NavLink className={({isActive}) => isActive ? 'active-link': ''} to="/Cart"> Cart </NavLink>
+              <NavLink className={({isActive}) => isActive ? 'active-link': 'inactive-link'} to="/Cart"><AiOutlineShoppingCart/></NavLink>
             </li>
           </ul>
         </nav>

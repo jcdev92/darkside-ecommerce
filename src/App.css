@@ -104,6 +104,10 @@ body {
     margin: 0;
 }
 
+.inactive-link {
+    color: var(--light-gray);
+}
+
 .active-link {
     background-color: tomato;
     color: white;
