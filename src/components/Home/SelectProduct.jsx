@@ -20,7 +20,7 @@ const handleOnChange = (e) =>{
 
 
   return (
-    <div>
+    <div className="select__product">
         <select value={selectProduct} onChange={handleOnChange}>
             <option value="All">All Products</option>
             {categories?.map(category =>(
