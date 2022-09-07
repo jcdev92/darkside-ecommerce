@@ -1,9 +1,13 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import {BsCartPlus} from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom'
+import getConfig from '../../utils/getConfig'
 
 const ProductDescription = ({productInfo}) => {
 
     const [count, setCount] = useState(1)
+    const navigate = useNavigate()
 
     const handlePlus = () => setCount(count + 1)
     const handleMinus = () => count - 1 >= 1 ? setCount(count - 1) : setCount(1)
@@ -12,13 +16,13 @@ const ProductDescription = ({productInfo}) => {
         e.stopPropagation()
         const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
         const obj = {
-          id: product.id,
+          id: productInfo.id,
           quantity: count
         }
         axios.post(URL, obj, getConfig())
           .then(res => console.log(res.data))
           .catch(err => console.log(err))
-          navigate(`/cart`)
+        navigate(`/cart`)  
       }
 
   return (
