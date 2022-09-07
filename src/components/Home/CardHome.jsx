@@ -12,19 +12,18 @@ const CardHome = ({product}) => {
     navigate(`/product/${product.id}`)
   }
 
-  const handleButton = (e) => {
+    // add to cart
+  const handleAddCart = e => {
     e.stopPropagation()
     const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
-    const conf = {
+    const obj = {
       id: product.id,
       quantity: 1
     }
-    axios.post(URL, getConfig(), conf)
+    axios.post(URL, obj, getConfig())
       .then(res => console.log(res.data))
       .catch(err => console.log(err))
-
-    navigate(`/cart`)
-    // add to cart
+      navigate(`/cart`)
   }
   
   return (
@@ -45,7 +44,7 @@ const CardHome = ({product}) => {
           </span>
         </section>
         <div className="box__button">
-          <button onClick={handleButton} className="card__button"><BsCartPlus className="cart__icon"/></button>
+          <button onClick={handleAddCart} className="card__button"><BsCartPlus className="cart__icon"/></button>
         </div>
       </div>
 

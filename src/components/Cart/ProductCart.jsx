@@ -1,23 +1,28 @@
 import React from 'react'
+import {MdOutlineDeleteOutline} from 'react-icons/md'
 
-const ProductCart = () => {
-    
+const ProductCart = ({product, getAllProductsCart}) => {
 
+    const handleDeleteProduct = () => {
+        const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/cart/${product.id}`
+        axios.delete(URL, getConfig())
+          .then(() => getAllProductsCart())
+          .catch(err => console.log(err))
+      }
 
   return (
     <article className='cart__item'>
-        <header className='cart__item__header'>
-
-        <h3 className='cart__subtitle'>asda</h3>
-        <h3 className='cart__name'>Sambung Galaxy 22</h3>
-        </header>
-
-        <span className='cart__quantity'>1</span>
-        <div>
-            <span className='cart__total_label'>Total:</span>
-            <p className='cart__total_label'>850</p>
-        </div>
-    </article>
+    <header className='cart__item-header'>
+      <h4 className='cart__category'>{product.brand}</h4>
+      <h3 className='cart__name'>{product.title}</h3>
+    </header>
+    <i onClick={handleDeleteProduct} className="cart__trash"><MdOutlineDeleteOutline/></i>
+    <span className='cart__quantity'>{product.productsInCart.quantity}</span>
+    <footer className='cart__item-footer'>
+      <span className='cart__total-label'>Total:</span>
+      <p className='cart__total-number'>{product.price}</p>
+    </footer>
+  </article>
     )
 }
 

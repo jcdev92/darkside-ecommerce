@@ -19,20 +19,48 @@ const Cart = () => {
       getAllProductsCart()
     }, [])
 
-    
+    const handleCheckout = () => {
+        const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/purchases'
+        const obj = {
+          street: "Green St. 1456",
+          colony: "Southwest",
+          zipCode: 12345,
+          city: "USA",
+          references: "Some references"
+        }
+        axios.post(URL, obj, getConfig())
+          .then(res => {
+            console.log(res.data)
+            getAllProductsCart()
+          })
+          .catch(err => console.log(err))
+      }
 
-  return (
-    <article className='cart'>
-        <div className="empty__box"></div>
-        <h2>Cart</h2>
-        <ProductCart/>
-        <footer className='cart__footer'>
-            <span className='cart__total__global'>Total:</span>
-            <p className='cart__total__global_value'>1350</p>
-            <button className='cart__btn'>Checkout</button>
-        </footer>
-    </article>
-  )
+    
+    return (
+        <section className='cart'>
+            <div className="empty__box"></div>
+          <h2 className='cart__title'>Cart</h2>
+          <div className='cart__container-item'>
+            {
+              cartProducts?.map(product => (
+                <ProductCart
+                  key={product.id}
+                  product={product}
+                  getAllProductsCart={getAllProductsCart}
+                />
+              ))
+            }
+
+          </div>
+          <hr className='cart__hr' />
+          <footer className='cart__footer'>
+            <span className='cart__total-global-label'>Total:</span>
+            <p className='cart__total-global-value'>1350</p>
+            <button onClick={handleCheckout} className='cart__btn'>Checkout</button>
+          </footer>
+        </section>
+      )
 }
 
 export default Cart
