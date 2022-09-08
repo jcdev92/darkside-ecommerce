@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const CheckLogin = () => {
 
+    const navigate = useNavigate()
+
     const handledLogout = () =>{
         localStorage.removeItem("token")
+        navigate(`/`)
     }
 
     return (

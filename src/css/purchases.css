@@ -12,9 +12,6 @@
 .purch__card__date{
     padding: 8px;
 }
-.purch__card__list{
-    
-}
 .purch__card__item{
     display: flex;
     justify-content: space-evenly;
