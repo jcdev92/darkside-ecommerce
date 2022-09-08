@@ -26,7 +26,7 @@ const ProductCart = ({product, getAllProductsCart}) => {
       <span className='cart__total-label'>Total:</span>
       <p className='cart__total-number'>{product.price}</p>
     </footer>
-    <i onClick={handleDeleteProduct} className="cart__trash"><MdOutlineDeleteOutline/></i>
+    <i onClick={handleDeleteProduct} className="cart__trash"><MdOutlineDeleteOutline className='trash__icon'/></i>
   </article>
     )
 }
