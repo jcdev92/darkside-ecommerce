@@ -429,7 +429,6 @@ body {
 
 .similar__products{
     text-align: center;
-    padding: 2rem;
 }
 
 .similar__products__cont{
@@ -440,4 +439,21 @@ body {
     width: 100%;
     gap: 1.5rem;
     padding: 2rem;
+}
+
+/* Product Details */
+
+.productDetail__main_cont{
+    display: flex;
+    padding: 2rem;
+}
+
+.stock__button {
+    padding: 2rem;
+}
+
+.stock__button__plus {
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
 }
