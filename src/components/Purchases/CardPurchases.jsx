@@ -1,8 +1,9 @@
 import React from 'react'
 
 const CardPurchases = ({ purchase }) => {
-    console.log(purchase)
+
     let date = purchase.updatedAt.substring(0,10)
+
     return (
         <article className='purch__card'>
             <div className='purch__card__date'>
