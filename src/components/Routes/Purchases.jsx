@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import getConfig from '../../utils/getConfig'
 import CardPurchases from '../Purchases/CardPurchases'
+import '../../css/purchases.css'
 
 
 
@@ -22,7 +23,7 @@ const Purchases = () => {
     <section>
       <div className="empty__box"></div>
       <h1>Purchases</h1>
-      <div className='purchases__cont'>
+      <div className='purchases__cont purchase'>
         {
           purchases?.map(purchase => (
 
@@ -30,7 +31,7 @@ const Purchases = () => {
 
           ))
         }
-          </div>
+      </div>
     </section>
   )
 }

@@ -1,0 +1,24 @@
+.purchase{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.purch__card{
+    width: 550px;
+}
+.purch__card__date{
+    padding: 8px;
+}
+.purch__card__list{
+    
+}
+.purch__card__item{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+
+}
