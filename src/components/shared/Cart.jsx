@@ -43,6 +43,7 @@ const Cart = () => {
                 getAllProductsCart()
             })
             .catch(err => console.log(err))
+        setTotalPrice(0)
     }
 
 

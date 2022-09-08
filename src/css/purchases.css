@@ -1,3 +1,7 @@
+.purchases h1 {
+    text-align: center;
+    padding: 2rem;
+}
 .purchase{
     width: 100%;
     display: flex;
@@ -5,11 +9,17 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 2rem;
+    font-size: 1.3rem;
 }
+
 .purch__card{
-    width: 600px;
-    border: 1px solid #333;
+
+    width: 550px;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.5);
+    background-color: #fff;
     border-radius: 10px;
+
 }
 .purch__card__date{
     padding: 8px;
@@ -18,8 +28,8 @@
 .purch__card__item{
     text-align: start;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 0.8rem;
 
 }

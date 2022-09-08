@@ -423,6 +423,11 @@ body {
     transform: scale(1.1);
     transition: 0.2s transform ease-in-out;
 }
+<<<<<<< HEAD
+
+/* Product details */
+
+=======
 .similar__products{
     text-align: center;
 }
@@ -434,3 +439,4 @@ body {
     width: 100%;
     gap: 20px;
 }
+>>>>>>> cc33581c18cfe1ed6386a441e9d9bf4e0fc2a2eb

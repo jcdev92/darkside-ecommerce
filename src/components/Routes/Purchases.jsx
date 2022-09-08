@@ -20,7 +20,7 @@ const Purchases = () => {
   // console.log(purchases)
 
   return (
-    <section>
+    <section className="purchases">
       <div className="empty__box"></div>
       <div className='purchases__cont purchase'>
       <h1>Purchases</h1>
