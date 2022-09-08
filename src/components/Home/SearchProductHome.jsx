@@ -7,6 +7,7 @@ const SearchProductHome = ({setNameProduct, setSelectProduct}) => {
         e.preventDefault()
         setNameProduct(e.target.nameProduct.value)
         setSelectProduct()
+        e.target.nameProduct.value = ''
       }
     
 
