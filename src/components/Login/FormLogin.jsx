@@ -2,21 +2,29 @@ import axios from 'axios'
 import React from 'react'
 import '../../css/login.css'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 const FormLogin = () => {
 
+
    const {register, handleSubmit, reset} = useForm()
+   const navigate = useNavigate()
 
     const submit = (data) => {
+
         const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users/login'
         axios.post(URL, data)
-            .then(res => localStorage.setItem('token', res.data.data.token))
+            .then(res => {
+                localStorage.setItem('token', res.data.data.token)
+                navigate("/")
+            })
             .catch(err => console.log(err))
-        reset(
-            {
-                email: '',
-                password: ''
-            }
+            reset(
+                {
+                    email: '',
+                    password: ''
+                }
+                
         )
     }
 

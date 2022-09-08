@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CheckLogin from '../Login/CheckLogin'
 import FormLogin from '../Login/FormLogin'
 
