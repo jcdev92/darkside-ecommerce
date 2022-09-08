@@ -5,6 +5,7 @@ import {AiOutlineShoppingCart} from 'react-icons/ai';
 import {MdOutlineAutoStories} from 'react-icons/md';
 
 const Header = () => {
+  
   return (
     <header className="header">
         <NavLink to="/">
