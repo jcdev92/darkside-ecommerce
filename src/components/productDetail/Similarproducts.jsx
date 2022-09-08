@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
-import CardHome from '../home/CardHome'
+import CardHome from '../Home/CardHome';
 
 const Similarproducts = ({productInfo}) => {
     console.log(productInfo);
