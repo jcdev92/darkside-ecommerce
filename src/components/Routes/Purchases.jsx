@@ -22,8 +22,8 @@ const Purchases = () => {
   return (
     <section>
       <div className="empty__box"></div>
-      <h1>Purchases</h1>
       <div className='purchases__cont purchase'>
+      <h1>Purchases</h1>
         {
           purchases?.map(purchase => (
 
