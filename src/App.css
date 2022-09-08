@@ -429,6 +429,7 @@ body {
 
 .similar__products{
     text-align: center;
+    padding: 2rem;
 }
 
 .similar__products__cont{
@@ -437,5 +438,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    gap: 20px;
+    gap: 1.5rem;
+    padding: 2rem;
 }
