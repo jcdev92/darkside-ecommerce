@@ -7,12 +7,21 @@ import ProductCart from '../Cart/ProductCart'
 const Cart = () => {
 
     const [cartProducts, setCartProducts] = useState()
+    const [totalPrice, setTotalPrice] = useState()
 
     const getAllProductsCart = () => {
         const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
         axios.get(URL, getConfig())
-            .then(res => setCartProducts(res.data.data.cart.products))
+            .then(res => {
+                const products = res.data.data.cart.products
+                setCartProducts(products)
+                const total = products.reduce((acc, cv)=>{
+                    return Number(cv.price)*cv.productsInCart.quantity + acc
+                }, 0)
+                setTotalPrice(total)
+            })
             .catch(err => setCartProducts())
+            
     }
 
     useEffect(() => {
@@ -58,7 +67,7 @@ const Cart = () => {
                 <footer className='cart__footer'>
                     <div className='cart__footer--total'>
                         <span className='cart__total-global-label'>Total:</span>
-                        <p className='cart__total-global-value'>1350</p>
+                        <p className='cart__total-global-value'>{totalPrice}</p>
                     </div>
                     <button onClick={handleCheckout} className='cart__footer--button'>Checkout</button>
                 </footer>
