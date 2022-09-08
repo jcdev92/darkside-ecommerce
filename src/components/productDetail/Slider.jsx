@@ -3,7 +3,6 @@ import '../../css/slider.css'
 const Slider = ({ imgs }) => {
 
     const [countSlide, setCountSlide] = useState(1)
-    console.log(imgs);
 
     const percent = 100 / imgs?.length;
 
@@ -23,16 +22,16 @@ const Slider = ({ imgs }) => {
 
 
     return (
-        <div class="slider_cont">
+        <div className="slider_cont">
             <div className='slider'>
                 <div className="slider_btn l">
                     <button disabled={countSlide <= 1} onClick={handleLeft}>
-                        b
+                    &#60;
                     </button>
                 </div>
                 <div className="slider_btn r">
                     <button disabled={countSlide >= imgs?.length} onClick={handleRigth}>
-                        a
+                    &#62;
                     </button>
                 </div>
 

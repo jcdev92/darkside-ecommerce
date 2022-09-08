@@ -424,3 +424,14 @@ body {
     transform: scale(1.1);
     transition: 0.2s transform ease-in-out;
 }
+.similar__products{
+    text-align: center;
+}
+.similar__products__cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
