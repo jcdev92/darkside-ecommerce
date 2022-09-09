@@ -12,7 +12,6 @@ const SearchProductHome = ({setNameProduct, setSelectProduct}) => {
     return (
         <div className="input">
             <input onChange={handleSearchProduct} type="text" placeholder='search product' />
-            <button>Search</button>
         </div>
     )
 }
