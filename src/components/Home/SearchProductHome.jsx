@@ -4,18 +4,16 @@ const SearchProductHome = ({setNameProduct, setSelectProduct}) => {
 
 
     const handleSearchProduct = (e) =>{
-        e.preventDefault()
-        setNameProduct(e.target.nameProduct.value)
+        setNameProduct(e.target.value)
         setSelectProduct()
-        e.target.nameProduct.value = ''
       }
     
 
     return (
-        <form action="" onSubmit={handleSearchProduct} className="input">
-            <input type="text" id='nameProduct' placeholder='search product' />
+        <div className="input">
+            <input onChange={handleSearchProduct} type="text" placeholder='search product' />
             <button>Search</button>
-        </form>
+        </div>
     )
 }
 
