@@ -1,11 +1,12 @@
 import React from 'react'
 
-const SearchProductHome = ({setNameProduct, setSelectProduct}) => {
+const SearchProductHome = ({setNameProduct, setSelectProduct, setPrice}) => {
 
 
     const handleSearchProduct = (e) =>{
         setNameProduct(e.target.value)
         setSelectProduct()
+        setPrice()
       }
     
 

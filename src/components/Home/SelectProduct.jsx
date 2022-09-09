@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-const SelectProduct = ({setSelectProduct, selectProduct}) => {
+const SelectProduct = ({setSelectProduct, selectProduct, setPrice}) => {
 
 const [categories, setCategories] = useState()
 
@@ -16,6 +16,7 @@ useEffect(()=>{
 const handleOnChange = (e) =>{
     e.preventDefault()
     setSelectProduct(e.target.value)
+    setPrice()
 }
 
 

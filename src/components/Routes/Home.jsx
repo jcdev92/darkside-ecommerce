@@ -42,6 +42,7 @@ const Home = ({ products }) => {
             selectProduct={selectProduct}
             setSelectProduct={setSelectProduct}
             products={products}
+            setPrice={setPrice}
           />
           <FilterPrice setObjFilterPrice={setObjFilterPrice} />
         </aside>
@@ -50,6 +51,7 @@ const Home = ({ products }) => {
             <SearchProductHome
               setNameProduct={setNameProduct}
               setSelectProduct={setSelectProduct}
+              setPrice={setPrice}
             />
           </div>
           <div className="home cards__container">

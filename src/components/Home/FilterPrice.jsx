@@ -9,6 +9,9 @@ const FilterPrice = ({setObjFilterPrice}) => {
             to: +e.target.toPrice.value
         }
         setObjFilterPrice(obj)
+        // reset
+        e.target.fromPrice.value = "";
+        e.target.toPrice.value = "";
     }
 
 
